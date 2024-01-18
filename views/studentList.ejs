@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+带横线 -  :  输出内容 + html 解析
+带等号 = ：输入内容（不进行解析），输出数据
+什么都不带：就是执行js流程
+-->
+<table>
+    <thead>
+    <tr>
+        <th>学生姓名</th>
+        <th>学生成绩</th>
+        <th>学生性别</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%for(let i=0;i<list.length;i++){%>
+    <tr>
+        <td><%=list[i].stuname%></td>
+        <td><%=list[i].grade%></td>
+        <td><%=list[i].sex%></td>
+        <td>
+            <a href="/detail.do?id=<%=list[i].id%>">
+                <button>修改</button>
+            </a>
+        </td>
+    </tr>
+    <%}%>
+    </tbody>
+</table>
+
+
+</body>
+</html>
